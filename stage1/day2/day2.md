@@ -143,7 +143,7 @@ Berikut adalah daftar perintah Linux yang sering digunakan beserta penjelasan da
 
 
 ## 20. **zip**
-`zip`  digunakan untuk mengarsipkan/mengompres file/directory.
+`zip`  digunakan untuk mengarsipkan/mengompres file/directory install zip terlebih dahulu untuk menjalankan nya `sudo apt install zip`.
 
 ![vm3 20](https://github.com/user-attachments/assets/fdd8b6dc-fcfb-462c-b0b1-3cfd6cb614e7)
 
@@ -186,7 +186,7 @@ Berikut adalah daftar perintah Linux yang sering digunakan beserta penjelasan da
 
 
 ## 24. **rm**
-`rm`   digunakan untuk menghapus file.
+`rm`   digunakan untuk menghapus file dan folder.
 
 ![vm3 24](https://github.com/user-attachments/assets/51b5d043-78c2-4258-ba7a-f24d77396980)
 
