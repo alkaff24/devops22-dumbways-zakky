@@ -143,6 +143,94 @@ Berikut perintah dan bagaimana cara untuk mengintegrasikan nya:
   ![vmday3-9](https://github.com/user-attachments/assets/af092d18-f43c-4db9-8e9b-3e5c8d9407d7)
 
 
+## 4. **Repository**
+Membuat Repository Baru dengan perintah `git init`
+
+![vmday3-10](https://github.com/user-attachments/assets/0ca453dd-0581-4b85-8ae0-80f8a7d98361)
+
+
+## 5. **Git Ignore**
+File .gitignore digunakan untuk mengabaikan file yang tidak ingin ditambahkan ke repositori.
+
+![vmday3-11](https://github.com/user-attachments/assets/37082813-975a-4383-b0a5-7b935d289b37)
+
+
+## 6. **Git Add dan Commit**
+Menambahkan File:
+- Tambahkan file spesifik:
+
+  ![vmday3-12](https://github.com/user-attachments/assets/e7ed9325-4470-4cb2-acfc-61bd370615d9)
+
+- Tambahkan semua file:
+
+  ![vmday3-13](https://github.com/user-attachments/assets/8ce9e596-adcd-43f5-b9d9-789dcf4ca499)
+
+Melakukan Commit:
+- Simpan perubahan dengan pesan:
+
+  ![vmday3-14](https://github.com/user-attachments/assets/cc916b1b-d929-43bc-9a2a-e4b1e7699bed)
+
+
+## 7. **Git Remote**
+Hubungkan repositori lokal dengan repositori jarak jauh:
+
+![vmday3-15](https://github.com/user-attachments/assets/955b4194-7531-4f62-a559-7dce777819e3)
+
+Lihat daftar repositori jarak jauh:
+
+![vmday3-16](https://github.com/user-attachments/assets/77cbbdeb-360e-4b02-b9d0-67c1e95bf23a)
+
+
+## 8. **Git Push**
+Kirim perubahan ke repositori jarak jauh:
+
+![vmday3-17](https://github.com/user-attachments/assets/8cb54cae-115d-4050-b1b7-d1c369e1e3e2)
+
+
+## 9. **Git Branch**
+Membuat Cabang Baru dan melihat semua branch:
+
+![vmday3-18](https://github.com/user-attachments/assets/08ef94e7-4156-4ddd-8949-bc007db10fc4)
+
+Berpindah ke Cabang:
+
+![vmday3-19](https://github.com/user-attachments/assets/d470da91-906a-44cc-beb0-6f2255eb803c)
+
+
+## 10. **Git Pull**
+Ambil dan gabungkan pembaruan dari repositori jarak jauh:
+
+![vmday3-20](https://github.com/user-attachments/assets/7fe5b48c-7f2a-41b5-afc9-4a80d7c34183)
+
+## 11. **Git Merge**
+Gabungkan perubahan dari cabang lain:
+
+![vmday3-21](https://github.com/user-attachments/assets/f7fd6031-30b1-4272-b62c-c6186837d20d)
+
+---
+
+# **Case Git Konflik**
+Ada 2 Developer yang sedang melakukan development aplikasi dari perusahaan A sebut saja Reyhan dan Teguh mereka kebetulan sedang mengerjakan suatu proyek yang sama, dan mereka sedang mengerjakan file yang sama index.html. Reyhan membuat perubahan pada file index.html dan melakukan commit: git add index.html;
+git commit -m "fix: Typo on Description".  Teguh kebetulan juga membuat perubahan pada index.html dan melakukan commit: git add index.html ; git commit -m "feat: Header Adjustment". Kemudia disini ternyata Reyhan melakukan push ke repository. Teguh, yang belum melakukan push, mencoba untuk melakukan push ke repositori. Karena ternyata ada perubahan baru di remote yang belum dimiliki Teguh, Git menolak push Teguh dan memberi tahu bahwa ada konflik. Disini Teguh harus melakukan Fix Conflict tersebut agar perubahan yang di buat oleh Teguh dapat tersimpan ke dalam repositori app tersebut. lalu bagaimana cara menangani case yang dimiliki oleh Teguh?
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
 
 
 
