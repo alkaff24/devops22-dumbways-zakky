@@ -213,6 +213,37 @@ Gabungkan perubahan dari cabang lain:
 Ada 2 Developer yang sedang melakukan development aplikasi dari perusahaan A sebut saja Reyhan dan Teguh mereka kebetulan sedang mengerjakan suatu proyek yang sama, dan mereka sedang mengerjakan file yang sama index.html. Reyhan membuat perubahan pada file index.html dan melakukan commit: git add index.html;
 git commit -m "fix: Typo on Description".  Teguh kebetulan juga membuat perubahan pada index.html dan melakukan commit: git add index.html ; git commit -m "feat: Header Adjustment". Kemudia disini ternyata Reyhan melakukan push ke repository. Teguh, yang belum melakukan push, mencoba untuk melakukan push ke repositori. Karena ternyata ada perubahan baru di remote yang belum dimiliki Teguh, Git menolak push Teguh dan memberi tahu bahwa ada konflik. Disini Teguh harus melakukan Fix Conflict tersebut agar perubahan yang di buat oleh Teguh dapat tersimpan ke dalam repositori app tersebut. lalu bagaimana cara menangani case yang dimiliki oleh Teguh?
 
+- Reyhan sudah membuat perubahan terlebih dahulu :
+
+  ![vmday3-22](https://github.com/user-attachments/assets/d5ae4a40-8d30-4859-8b1f-304fabef9885)
+
+- Teguh tidak bisa melakukan push setelah melakukan perubahan file index.html :
+
+  ![vmday3-23](https://github.com/user-attachments/assets/4af5eae6-f0f8-4038-bfff-5badfda93185)
+
+- Teguh mendapatkan konflik lagi setelah pull perubahan terbaru reyhan
+
+  ![vmday3-24](https://github.com/user-attachments/assets/b80efc34-bb55-494d-9b01-dd0613c9a3ea)
+
+- Selanjut nya teguh harus menggunakan command `git config pull.rebase false`
+
+  ![vmday3-25](https://github.com/user-attachments/assets/adcd340a-b812-4b44-8bc4-c165743ede44)
+
+- Tidak lupa teguh juga harus memasukan command `git rebase --continue` dan push ke reyhan `git push origin reyhan --force`
+
+  ![vmday3-27](https://github.com/user-attachments/assets/f8a2f9de-01ea-4896-b946-021bab5723cc)
+
+  ![vmday3-28](https://github.com/user-attachments/assets/d607500f-f33f-43d0-8258-4a6a8e5bfd6b)
+
+
+
+
+  
+
+
+  
+
+
 
 
   
