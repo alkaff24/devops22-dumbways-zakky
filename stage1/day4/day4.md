@@ -3,7 +3,7 @@
 ![nano](https://github.com/user-attachments/assets/2dc5980a-8798-45ac-82cb-e1c2e4c956f6)
 
 
-Nano adalah text editor berbasis terminal yang ringan dan mudah digunakan. Berikut ini adalah daftar shortcut yang dapat membantu Anda bekerja lebih efisien dengan Nano:
+Nano adalah text editor berbasis terminal yang ringan dan mudah digunakan. Berikut ini adalah daftar shortcut yang dapat membantu kita bekerja lebih efisien dengan Nano:
 
 ### Navigasi Dasar
 - **Ctrl + A**: Pindah ke awal baris.
@@ -36,7 +36,7 @@ Nano adalah text editor berbasis terminal yang ringan dan mudah digunakan. Berik
 - **Ctrl + _**: Pindah ke baris tertentu.
 
 ### Kombinasi Spesifik
-Beberapa shortcut di Nano menggunakan kombinasi tombol **Alt** atau **Ctrl**, tergantung pada sistem operasi yang digunakan. Jika Alt tidak berfungsi, Anda dapat mencoba **Esc** sebagai pengganti.
+Beberapa shortcut di Nano menggunakan kombinasi tombol **Alt** atau **Ctrl**, tergantung pada sistem operasi yang digunakan. Jika Alt tidak berfungsi, kita dapat mencoba **Esc** sebagai pengganti.
 
 ### Catatan Penting
 - Simbol **^** berarti tombol **Ctrl**.
