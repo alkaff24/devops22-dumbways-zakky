@@ -170,7 +170,7 @@ ID,Nama,Tim,Posisi,Gaji
 006,Daniel Ricciardo,AlphaTauri,6,8000000
 ```
 
-Tugas Anda adalah melakukan beberapa manipulasi teks menggunakan perintah `sed` di Linux:
+Tugas kita adalah melakukan beberapa manipulasi teks menggunakan perintah `sed` di Linux:
 
 ### 1. Mengganti "Red Bull Racing" dengan "Red Bull Racing Honda"
 Gunakan perintah `sed` untuk mengganti teks pada kolom Tim: `sed -i 's/Red Bull Racing/Red Bull Racing Honda/g' formula-one-drivers.md`.
