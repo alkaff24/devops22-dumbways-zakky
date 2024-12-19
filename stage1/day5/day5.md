@@ -47,10 +47,50 @@ Monolith cocok untuk aplikasi kecil atau sederhana, sedangkan Microservices lebi
 
   ![depdumbflix-frontend-4](https://github.com/user-attachments/assets/b707df29-d001-4dde-ad45-eeedfc9565d8)
 
-- sebelum install npm nya kita install downgrade dulu versi node nya ke v10 sesuai arahan dari repository baru setelah itu install       
+- Sebelum install npm nya kita install downgrade dulu versi node nya ke v10 sesuai arahan dari repository baru setelah itu install       
   dependensi aplikasi `npm install`.
 
   ![depdumbflix-frontend-6](https://github.com/user-attachments/assets/e67211a1-f06a-4696-9dc8-e85952e10c51)
+
+## Langkah 3 : Jalankan dan Akses Aplikasi
+- Selanjutnya kita jalankan aplikasi nya dengan perintah `npm start` sesuai yang ada di dalam package.json
+
+  ![depdumbflix-frontend-7](https://github.com/user-attachments/assets/6b1c5be6-f3bf-4b87-9327-00fef52db6df)
+
+  ![homeworkhelpday5-1](https://github.com/user-attachments/assets/0dfef50a-6002-442e-8833-66a3af8f68d1)
+
+- Setelah itu barulah kita buka di browser dan masukkan ip vm dan port 3000 tempat aplikasi itu berjalan `ip-vm-kita:3000`.
+
+  ![depdumbflix-frontend-8](https://github.com/user-attachments/assets/76eb9803-8100-4e85-bf79-d517c7b38b49)
+
+
+# Deploy Golang & Python dengan menampilkan nama masing-masing
+
+## Langkah 1: Menyiapkan Golang dan Python
+- Update dan install golang serta python di vm kita dengan perintah `sudo apt install -y golang python3-pip`.
+
+  ![golangpython-1](https://github.com/user-attachments/assets/dac2a849-51be-4737-8528-8c48d444514f)
+
+  ![golangpython-2](https://github.com/user-attachments/assets/6388b657-9178-4d78-b2aa-9a95faffc384)
+
+- Verivikasi version golang dan python pip dengan perintah `go version` dan `pip --version`.
+
+  ![golangpython-3](https://github.com/user-attachments/assets/304c2418-e016-4d3a-a858-6e59d4f366ba)
+
+## Langkah 2: Buat Aplikasi Golang
+- Buat direktori golang-app lalu buat file main.go.
+
+  ![golangpython-4](https://github.com/user-attachments/assets/84e08dc7-7f7e-4acb-b642-0ec83ddaa422)
+
+- Masukkan script ini kedalam file main.go:
+  
+
+
+
+
+
+
+
 
   
 
