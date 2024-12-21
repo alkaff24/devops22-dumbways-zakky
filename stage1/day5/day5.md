@@ -22,26 +22,131 @@ Microservices adalah arsitektur yang memecah aplikasi menjadi layanan-layanan ke
 Monolith cocok untuk aplikasi kecil atau sederhana, sedangkan Microservices lebih ideal untuk aplikasi besar yang memerlukan fleksibilitas, skalabilitas, dan pengembangan paralel.
 
 
+---
 
-# Deploy Aplikasi dumbflix-frontend (NodeJS)
+# Deploy Golang, Python dan nodejs dengan menampilkan nama masing-masing
 
-## Langkah 1 : Update dan Install nvm dan nodejs di dalam VM
-- Update vm kita dengan perintah `sudo apt update` dan `sudo apt uprade`.
+## Langkah 1: Menyiapkan Golang, Nodejs dan Python
+- Update dan install golang serta python di vm kita dengan perintah `sudo apt install -y golang python3-pip`.
 
-  ![depdumbflix-frontend-1](https://github.com/user-attachments/assets/cf536319-19ed-4acf-9cd1-70d6de05cd9c)
+  ![golangpython-1](https://github.com/user-attachments/assets/dac2a849-51be-4737-8528-8c48d444514f)
 
-- Install nvm kita dengan mengambil link di github nvm : `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash`
-  , jika sudah selesai kita masukan perintah `exec bash` untuk mengaktifkan nvm, lalu verivikasi versi nvm dengan perintah `mvm -v`, lalu   insta nodejs `nvm i 20`.
+  ![golangpython-2](https://github.com/user-attachments/assets/6388b657-9178-4d78-b2aa-9a95faffc384)
 
   ![depdumbflix-frontend-2](https://github.com/user-attachments/assets/68135681-c31d-4f02-9176-43d9597eef87)
 
-  ![depdumbflix-frontend-3](https://github.com/user-attachments/assets/37e130d8-e967-4a27-80a4-e8c5a59525cb)
+  ![depdumbflix-frontend-5](https://github.com/user-attachments/assets/52fcb3bf-9477-4d34-9eb0-6f2a6b45d6f3)
+
+- Verivikasi version golang dan python pip dengan perintah `go version`, `node -v` dan `pip --version`.
+
+  ![golangpython-3](https://github.com/user-attachments/assets/304c2418-e016-4d3a-a858-6e59d4f366ba)
 
   ![depdumbflix-frontend-5](https://github.com/user-attachments/assets/52fcb3bf-9477-4d34-9eb0-6f2a6b45d6f3)
 
+## Langkah 2: Buat Aplikasi Golang
+- Buat direktori golang-app lalu buat file main.go.
+
+  ![golangpython-4](https://github.com/user-attachments/assets/84e08dc7-7f7e-4acb-b642-0ec83ddaa422)
+
+- Masukkan script ini kedalam file main.go:
+  ```plaintext
+  package main
+  
+  import (
+      "fmt"
+      "net/http"
+  )
+  
+  func handler(w http.ResponseWriter, r *http.Request) {
+      fmt.Fprintf(w, "Halo, nama saya Muhammad Jusuf Zakky. Ini adalah aplikasi Golang!")
+  }
+  
+  func main() {
+      http.HandleFunc("/", handler)
+      fmt.Println("Server Golang berjalan di port 8080")
+      http.ListenAndServe(":8080", nil)
+  }
+  
+  ```
+
+  ![golangpython-5](https://github.com/user-attachments/assets/2345c4b9-3bbd-4443-a382-2030875f1666)
+
+- Jalankan aplikasi dengan perintah `go run main.go` dan akses aplikasi ke browser `ip-vm-kita:8080`.
+
+  ![golangpython-6](https://github.com/user-attachments/assets/ad20e928-28d4-4a31-b11d-6f941a5c468a)
+
+  ![golangpython-7](https://github.com/user-attachments/assets/8ad0ee16-cd5c-4fbc-9919-a4f8c535f2a9)
 
 
-## Langkah 2 : Clone dan Konfigurasi Aplikasi
+## Langkah 3: Buat Aplikasi Python
+- Buat direktori python-app serta file app.py dan kita harus install flask dengan perintah `pip3 install flask`.
+
+  ![golangpython-8](https://github.com/user-attachments/assets/97ab7f41-98aa-43ea-9775-211231eb0a64)
+
+  ![golangpython-9](https://github.com/user-attachments/assets/f3437b01-319d-4d7f-ae41-4fbc5c30d3a3)
+
+
+- Masukkan script ini ke dalam file app.py:
+
+  ```plaintext
+  from flask import Flask
+  
+  app = Flask(__name__)
+  
+  @app.route('/')
+  def home():
+      return "Halo, nama saya Muhammad Jusuf Zakky. Ini adalah aplikasi Python!"
+  
+  if __name__ == '__main__':
+      app.run(host='0.0.0.0', port=5000)
+  ```
+
+  ![golangpython-10](https://github.com/user-attachments/assets/07e39129-ec16-4a57-9649-52a404a72c24)
+
+- Jalankan aplikasi dengan perintah `python3 app.py` dan akses aplikasi ke browser `ip-vm-kita:5000`.
+
+  ![golangpython-11](https://github.com/user-attachments/assets/fa0b94d5-9054-474f-b900-1283c1eb370f)
+
+  ![golangpython-12](https://github.com/user-attachments/assets/1b9c8ab4-e369-493a-9728-9879ba705d0d)
+
+## Langkah 4: Buat Aplikasi Nodejs Menggunakan Expressjs
+- Buat direktori simple-app-node lalu memasukkan perintah `npm init -y` lalu instal npm dan expressjs `npm install express --save`
+
+  ![gonodepy-1](https://github.com/user-attachments/assets/ad6e2140-aa7e-4ee1-898d-21af7c664aff)
+
+  ![gonodepy-2](https://github.com/user-attachments/assets/5faf9807-e221-4e38-b6a9-43afc23afabf)
+
+- Masukkan script ini kedalam file index.js:
+
+  ```plaintext
+  const express = require("express");
+  const app = express();
+  const port = 3001;
+  
+  app.get("/", (req, res) => {
+    res.send("Halo, nama saya Muhammad Jusuf Zakky. Ini adalah aplikasi express js");
+  });
+  
+  app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`);
+  });
+  
+  ```
+
+  ![gonodepy-3](https://github.com/user-attachments/assets/3c3b519e-df64-4a3d-af42-52e0d68fb69d)
+
+- Jalankan aplikasi dengan perintah `node index.js` dan akses aplikasi ke browser `ip-vm-kita:3001`.
+
+  ![gonodepy-4](https://github.com/user-attachments/assets/13620323-b34c-4b24-8ec6-2a1044f2c7d3)
+
+  ![gonodepy-5](https://github.com/user-attachments/assets/f85a201b-f7db-43bf-ab1a-655422ded16d)
+
+
+---
+
+# Deploy Aplikasi dumbflix-frontend (NodeJS)
+
+## Langkah 1: Clone dan Konfigurasi Aplikasi
 - Clone repository Dumbflix-Frontend `git clone https://github.com/dumbwaysdev/dumbflix-frontend.git` dan masuk direktorinya
   `cd dumbflix-frontend`.
 
@@ -52,7 +157,7 @@ Monolith cocok untuk aplikasi kecil atau sederhana, sedangkan Microservices lebi
 
   ![depdumbflix-frontend-6](https://github.com/user-attachments/assets/e67211a1-f06a-4696-9dc8-e85952e10c51)
 
-## Langkah 3 : Jalankan dan Akses Aplikasi
+## Langkah 2 : Jalankan dan Akses Aplikasi
 - Selanjutnya kita jalankan aplikasi nya dengan perintah `npm start` sesuai yang ada di dalam package.json
 
   ![depdumbflix-frontend-7](https://github.com/user-attachments/assets/6b1c5be6-f3bf-4b87-9327-00fef52db6df)
@@ -62,27 +167,81 @@ Monolith cocok untuk aplikasi kecil atau sederhana, sedangkan Microservices lebi
 - Setelah itu barulah kita buka di browser dan masukkan ip vm dan port 3000 tempat aplikasi itu berjalan `ip-vm-kita:3000`.
 
   ![depdumbflix-frontend-8](https://github.com/user-attachments/assets/76eb9803-8100-4e85-bf79-d517c7b38b49)
+  
+# Deploy Aplikasi dumbflix-frontend Dengan Menggunakan Node v14
+
+## Merubah Versi Node ke v14
+- Masukkan perintah `nvm use 14` lalu install depedencies nya `npm instal`
+
+  ![dumbv14-1](https://github.com/user-attachments/assets/ad72ae70-55c4-471f-b692-651c82cd7320)
 
 
-# Deploy Golang & Python dengan menampilkan nama masing-masing
+- Setelah itu jalan kan dengan perintah `npm start` lanjut kita mengakses di browser kita `ip-vm-kita:3000`.
 
-## Langkah 1: Menyiapkan Golang dan Python
-- Update dan install golang serta python di vm kita dengan perintah `sudo apt install -y golang python3-pip`.
+  ![dumbv14-2](https://github.com/user-attachments/assets/0874c2b6-9dfc-492e-9931-e810142b47a9)
 
-  ![golangpython-1](https://github.com/user-attachments/assets/dac2a849-51be-4737-8528-8c48d444514f)
+  ![dumbv14-3](https://github.com/user-attachments/assets/145e712a-52bc-4239-9d16-a752c11eeb6a)
 
-  ![golangpython-2](https://github.com/user-attachments/assets/6388b657-9178-4d78-b2aa-9a95faffc384)
+---
 
-- Verivikasi version golang dan python pip dengan perintah `go version` dan `pip --version`.
 
-  ![golangpython-3](https://github.com/user-attachments/assets/304c2418-e016-4d3a-a858-6e59d4f366ba)
+# Implementasi Penggunaan PM2 Agar Aplikasi Dapat Berjalan di Background
+## Install pm2 
+- Jalankan perintah `npm i pm2 -g`.
 
-## Langkah 2: Buat Aplikasi Golang
-- Buat direktori golang-app lalu buat file main.go.
+  ![pm2i](https://github.com/user-attachments/assets/fc2d26f7-4510-4766-ac7d-772e57b21ee7)
 
-  ![golangpython-4](https://github.com/user-attachments/assets/84e08dc7-7f7e-4acb-b642-0ec83ddaa422)
 
-- Masukkan script ini kedalam file main.go:
+
+## Simple App Node
+- Untuk menjalankan aplikasi Node.js menggunakan PM2, gunakan perintah `pm2 start index.js --name simple-app-node`, setelah itu masukkan   perintah `pm2 startup` dan `pm2 save`.
+
+  ![pm2node-1](https://github.com/user-attachments/assets/b60c68e5-d723-4f59-bd90-52844013ea8e)
+
+- Selanjutnya kita mencoba keluar dari vm kita dan mencoba di browser.
+
+  ![pm2node-2](https://github.com/user-attachments/assets/ab5a0922-45f4-4fa5-8cfc-5da4c2e29bfc)
+
+## python-app
+- Untuk menjalankan aplikasi python-app menggunakan PM2, gunakan perintah `pm2 start python3 app.py --name python-app`, setelah itu        masukkan   perintah `pm2 startup` dan `pm2 save`.
+
+  ![pm2py-1](https://github.com/user-attachments/assets/50babf9c-ea76-48b5-b40e-245c90ed78d8)
+
+- Selanjutnya kita mencoba keluar dari vm kita dan mencoba di browser.
+
+  ![pm2py-2](https://github.com/user-attachments/assets/66d5585d-8399-4255-a900-9d07ec9faaca)
+
+## dumbflix-frontend
+- Untuk menjalankan aplikasi dumbflix-frontend menggunakan PM2, gunakan perintah
+  `pm2 start npm --name dumbflix-frontend -- start`, setelah itu masukkan   perintah `pm2 startup` dan `pm2 save`.
+
+  ![pm2dumbfe-1](https://github.com/user-attachments/assets/f68be7f9-791c-46be-9eaa-b829e82dcc73)
+
+  ![pm2dumbfe-2](https://github.com/user-attachments/assets/cf326ee7-3939-4585-aa50-1ff7658421a3)
+
+
+
+- Selanjutnya kita mencoba keluar dari vm kita dan mencoba di browser.
+
+  ![pm2dumbfe-3](https://github.com/user-attachments/assets/9df57468-5774-4396-bb41-82f91e40e4d9)
+
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+  
+
+
+
   
 
 
