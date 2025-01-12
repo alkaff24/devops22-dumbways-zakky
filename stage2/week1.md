@@ -201,8 +201,65 @@
 
 ---
 
+# 5. Webserver
+
+## Install Nginx
+- Install Nginx di server kita dan setelah instalasi selesai, pastikan Nginx berjalan.
+
+  ![ws1 1](https://github.com/user-attachments/assets/56502d0f-0635-499a-8dd8-9769e9cb14c2)
 
 
+  ![ws1 2](https://github.com/user-attachments/assets/a16af069-aef1-4107-a696-c9503289f60f)
+
+##  Buat Reverse Proxy dan Konfigurasi Domain
+- Buat file konfigurasi baru untuk frontend dan tambahkan konfigurasi reverse proxy nya.
+
+  ![ws1 3](https://github.com/user-attachments/assets/37f569e4-98c0-4cba-9f43-2be490d7621e)
+
+- Buat file konfigurasi baru untuk backend dan tambahkan konfigurasi reverse proxy nya.
+
+  ![ws1 4](https://github.com/user-attachments/assets/30d55d78-ac1d-4690-8aa5-0c18b4e5ae13)
+
+## Pasang SSL untuk Domain
+- Menggunakan Certbot.
+
+  Install certbot.
+
+  ![ws1 5](https://github.com/user-attachments/assets/78c482c4-0d8b-4425-8592-f1f5d8f30655)
+
+  Jalankan Certbot untuk mengaktifkan SSL.
+
+  ![ws1 6](https://github.com/user-attachments/assets/443d3f42-4056-4626-b694-24a33d57bf3d)
+
+  ![ws1 7](https://github.com/user-attachments/assets/13859799-cebb-4da0-9e21-97c36ade921c)
+
+## Implementasi Wildcard SSL
+- Wildcard SSL memungkinkan kita menggunakan satu sertifikat SSL untuk banyak subdomain di domain yang sama misalnya
+ (*.zakky.studentdumbways.my.id).
+
+  Jalankan perintah `sudo certbot -d *.nama-domain --manual --preferred-challenges dns certonly`.
+
+  ![ws1 8](https://github.com/user-attachments/assets/f9a46d61-8026-4bd0-96a2-c933cda118d3)
+
+  Certbot akan memberikan teks yang perlu kita tambahkan ke DNS TXT Record di cloudflare.
+  
+  ![ws1 9](https://github.com/user-attachments/assets/a4648b1e-b8a0-49c3-96a9-4457b484caa8)
+
+  Setelah menambahkan DNS TXT Record, lanjutkan proses hingga selesai.
+
+  ![ws1 10](https://github.com/user-attachments/assets/310c861f-3a94-41cd-b405-14ea694540e0)
+
+  
+
+
+
+
+  
+  
+
+
+
+  
 
   
 
