@@ -121,7 +121,65 @@
   ![database2 7](https://github.com/user-attachments/assets/f46eec1c-0713-4cb7-8d74-8fd72338582e)
 
 
+--- 
+
+# 3. Backend
+
+## Deploy Backend
+- Clone Aplikasi Backend, jalankan perintah ini untuk meng-clone repositori `git clone url-repository`.
+
+  ![backend1 1](https://github.com/user-attachments/assets/08eb5705-74c9-4f12-bef9-e274f99ba34a)
+
+- Menggunakan Node.js Versi 14.
+
+  ![backend1 2](https://github.com/user-attachments/assets/311cdb8d-1c8e-4621-8287-73a1fac75aeb)
+
+  ![backend1 3](https://github.com/user-attachments/assets/e1f910fd-1fc3-4536-ae58-4eb1aa6dc62d)
+
+- Mengubah Konfigurasi pada dumbflix-backend/config/config.json. Sesuaikan bagian berikut dengan konfigurasi database kita.
+
+  ![backend1 4](https://github.com/user-attachments/assets/dc50a7ca-b700-4a92-9ecf-fe7f75c5274d)
+
+- Install sequelize-cli secara global dan Install dependensi backend.
+
+  ![backend1 5](https://github.com/user-attachments/assets/758e029d-874d-4e72-b1cb-e3d5611d7c3f)
+
+  ![backend1 6](https://github.com/user-attachments/assets/317f9025-c42a-42c3-89d4-9c42e8bac5fc)
+
+- Jalankan Migrasi dan Gunakan sequelize-cli, untuk menjalankan migrasi database
+  masukkan perintah `npx sequelize-cli db:migrate`.
+
+  ![backend1 7](https://github.com/user-attachments/assets/9a6de238-ced4-4683-9305-4b8d618754d7)
+
+- Deploy Aplikasi Menggunakan PM2.
+
+  Install pm2.
+
+  ![backend1 8](https://github.com/user-attachments/assets/c5f9514d-62a1-430b-b440-523045d0ac91)
+
+  Jalankan aplikasi menggunakan PM2.
+
+  ![backend1 9](https://github.com/user-attachments/assets/457a9bfd-5d51-4f17-aed6-bee6f2fc0da3)
+
+  ![backend1 10](https://github.com/user-attachments/assets/5dae3985-f43a-4734-90b8-eda89056981e)
+
+- Jalankan aplikasi di browser `ip-server:5000`.
+
+  ![backend1 11](https://github.com/user-attachments/assets/c1abdd6b-2605-42fe-87e2-f337729b0e91)
+
 ---
+
+  
+
+
+
+
+
+  
+
+
+
+
 
 
 
