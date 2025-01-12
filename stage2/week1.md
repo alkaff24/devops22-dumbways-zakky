@@ -125,7 +125,7 @@
 
 # 3. Backend
 
-## Deploy Backend
+## Deploy Aplikasi Backend
 - Clone Aplikasi Backend, jalankan perintah ini untuk meng-clone repositori `git clone url-repository`.
 
   ![backend1 1](https://github.com/user-attachments/assets/08eb5705-74c9-4f12-bef9-e274f99ba34a)
@@ -169,8 +169,53 @@
 
 ---
 
+# 4. Frontend
+
+## Deploy Aplikasi Frontend
+- Clone Aplikasi Frontend `git clone url-repository`.
+
+  ![fe1 1](https://github.com/user-attachments/assets/054be289-f8ea-425c-ace6-00d1cfd260cb)
+
+- Gunakan Node.js Versi 14
+
+  ![fe1 2](https://github.com/user-attachments/assets/aa7df825-7cc7-4782-8c69-ab3f7af016ef)
+
+- Mengubah Konfigurasi pada `src/config/api.js` menjadi `"http://localhost:5000/api";`.
+
+  ![fe1 3](https://github.com/user-attachments/assets/d1ec5c06-1ec8-4656-9149-e70d4d6a53d9)
+
+- Install Dependensi 'npm install'.
+
+  ![fe1 4](https://github.com/user-attachments/assets/08eca747-ac0f-4da2-90a4-cea12a75bc2e)
+
+- Deploy Frontend Menggunakan PM2.
+
+  ![fe1 5](https://github.com/user-attachments/assets/3a4bf556-2a4a-44c8-850d-608b802814a0)
+
+  ![fe1 6](https://github.com/user-attachments/assets/c0272bfd-8b98-4b83-9724-f37335751df6)
+
+- Mencoba akses Aplikasi Frontend `ip-server:3000`.
+
+  ![fe1 7](https://github.com/user-attachments/assets/21364212-42df-4f08-8a48-0927af83feda)
+
+
+---
+
+
+
+
   
 
+
+
+  
+
+  
+
+
+   
+
+   
 
 
 
